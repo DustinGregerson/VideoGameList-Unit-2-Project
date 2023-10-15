@@ -20,7 +20,7 @@ namespace VideoGameList.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     name = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     favoriteCharacter = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    wouldPlayAgain = table.Column<bool>(type: "bit", nullable: false)
+                    wouldPlayAgain = table.Column<bool>(type: "bit", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -33,8 +33,8 @@ namespace VideoGameList.Migrations
                 values: new object[,]
                 {
                     { 1, "alucard", "Castlevania Symphony of the Night", true },
-                    { 2, "Protagonist", "Factorio", true },
-                    { 3, "Protagonist", "satisfactory", true }
+                    { 2, "Protagonist", "Factorio", null },
+                    { 3, "Protagonist", "satisfactory", false }
                 });
         }
 

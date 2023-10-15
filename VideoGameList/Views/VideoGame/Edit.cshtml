@@ -1,1 +1,34 @@
-﻿this is edit
+﻿@model videoGame
+@{
+    String title = ViewBag.Action + " Vidieo Game";
+    ViewBag.Title = title;
+}
+<h2>@ViewBag.Title</h2>
+<form asp-action="Edit" method="post">
+    <div asp-validation-summary="All" class="text-danger"></div>
+    <div class="mb-3">
+        <label asp-for="name">Name of Game</label>
+        <input asp-for="name" class="form-control">
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="favoriteCharacter">Favorite Character</label>
+        <input asp-for="favoriteCharacter" class="form-control">
+
+    </div>
+
+    <div class="mb-3">
+        <select asp-for="wouldPlayAgain" class="form-control">
+            <option value="true">Yes</option>
+            <option value="false">No</option>
+            <option value="@DBNull.Value">Maybe</option>
+        </select>
+    </div>
+
+    <input type="hidden" asp-for="videoGameId" />
+    
+
+    <button type="submit" class="btn btn-success">@ViewBag.Action</button>
+    <a asp-controller="Home" asp-action="Index"
+       class="btn btn-danger">Cancel</a>
+</form>

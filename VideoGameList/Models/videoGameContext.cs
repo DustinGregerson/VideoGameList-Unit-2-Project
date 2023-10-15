@@ -29,14 +29,14 @@ namespace VideoGameList.Models
                  videoGameId = 2,
                  name = "Factorio",
                  favoriteCharacter = "Protagonist",
-                 wouldPlayAgain = true
+                 wouldPlayAgain = null
              },
              new videoGame
              {
                  videoGameId = 3,
                  name = "satisfactory",
                  favoriteCharacter = "Protagonist",
-                 wouldPlayAgain = true
+                 wouldPlayAgain = false
              }
             ); ;
         }

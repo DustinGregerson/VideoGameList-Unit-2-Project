@@ -12,7 +12,7 @@ using VideoGameList.Models;
 namespace VideoGameList.Migrations
 {
     [DbContext(typeof(videoGameContext))]
-    [Migration("20231015083749_Initial")]
+    [Migration("20231015203436_Initial")]
     partial class Initial
     {
         /// <inheritdoc />
@@ -42,7 +42,6 @@ namespace VideoGameList.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<bool?>("wouldPlayAgain")
-                        .IsRequired()
                         .HasColumnType("bit");
 
                     b.HasKey("videoGameId");
@@ -61,15 +60,14 @@ namespace VideoGameList.Migrations
                         {
                             videoGameId = 2,
                             favoriteCharacter = "Protagonist",
-                            name = "Factorio",
-                            wouldPlayAgain = true
+                            name = "Factorio"
                         },
                         new
                         {
                             videoGameId = 3,
                             favoriteCharacter = "Protagonist",
                             name = "satisfactory",
-                            wouldPlayAgain = true
+                            wouldPlayAgain = false
                         });
                 });
 #pragma warning restore 612, 618

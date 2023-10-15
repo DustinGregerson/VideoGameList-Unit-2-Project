@@ -39,7 +39,6 @@ namespace VideoGameList.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<bool?>("wouldPlayAgain")
-                        .IsRequired()
                         .HasColumnType("bit");
 
                     b.HasKey("videoGameId");
@@ -58,15 +57,14 @@ namespace VideoGameList.Migrations
                         {
                             videoGameId = 2,
                             favoriteCharacter = "Protagonist",
-                            name = "Factorio",
-                            wouldPlayAgain = true
+                            name = "Factorio"
                         },
                         new
                         {
                             videoGameId = 3,
                             favoriteCharacter = "Protagonist",
                             name = "satisfactory",
-                            wouldPlayAgain = true
+                            wouldPlayAgain = false
                         });
                 });
 #pragma warning restore 612, 618
