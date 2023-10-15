@@ -1,6 +1,27 @@
-﻿
+﻿@model List<videoGame>
 @{
-   
+    ViewBag.Title = "My Video Games";
 }
 
+
+<table class="table table-bordered tabel-striped">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Favorite Character</th>
+            <th>Would Play Again</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var videoGame in Model)
+        {
+            <tr>
+                <td>@videoGame.name</td>
+                <td>@videoGame.favoriteCharacter</td>
+                <td>@videoGame.wouldPlayAgain</td>
+            </tr>
+        }
+    </tbody>
+
+</table>
 

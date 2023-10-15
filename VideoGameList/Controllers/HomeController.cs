@@ -15,7 +15,7 @@ namespace VideoGameList.Controllers
         }
         public IActionResult Index()
         {
-            var videoGames = context.videoGames;
+            var videoGames = context.videoGames.ToList();
             return View(videoGames);
         }
 

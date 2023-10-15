@@ -1,6 +1,5 @@
 ﻿
 using Microsoft.EntityFrameworkCore;
-
 namespace VideoGameList.Models
 {
     public class videoGameContext : DbContext
