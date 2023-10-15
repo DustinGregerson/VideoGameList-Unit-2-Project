@@ -4,23 +4,61 @@
 }
 
 
-<table class="table table-bordered tabel-striped">
+<table class="table table-sm table-dark table-striped table-bordered table-hover">
     <thead>
         <tr>
-            <th>Name</th>
-            <th>Favorite Character</th>
-            <th>Would Play Again</th>
+            <th scope="col">Name</th>
+            <th scope="col">Favorite Character</th>
+            <th scope="col">Would Play Again</th>
+            <th scope="col">Modify</th>
         </tr>
     </thead>
     <tbody>
         @foreach (var videoGame in Model)
         {
-            <tr>
-                <td>@videoGame.name</td>
-                <td>@videoGame.favoriteCharacter</td>
-                <td>@videoGame.wouldPlayAgain</td>
-            </tr>
-        }
+                
+                    if(videoGame.wouldPlayAgain==null)
+                    {
+                    <tr scope="row" class="table-warning">
+                        <td>@videoGame.name</td>
+                        <td>@videoGame.favoriteCharacter</td>
+                        <td>Maybe</td>
+                        <td>
+                        <button type="button" class="btn  btn-light btn-outline-danger">Delete</button>
+                        <button type="button" class="btn  btn-light btn-outline-info">Update</button>
+                        </td>
+                    </tr>
+                    }
+                    else if (videoGame.wouldPlayAgain == true)
+                    {
+                    <tr scope="row" class="table-success">
+                        <td>@videoGame.name</td>
+                        <td>@videoGame.favoriteCharacter</td>
+                        <td>Yes</td>
+                        <td>
+                            <button type="button" class="btn  btn-light btn-outline-danger">Delete</button>
+                            <button type="button" class="btn  btn-light btn-outline-info">Update</button>
+                        </td>
+                    </tr>
+                    }
+                    else
+                    {
+                    <tr scope="row" class="table-danger">
+                        <td>@videoGame.name</td>
+                        <td>@videoGame.favoriteCharacter</td>
+                        <td>No</td>
+                        <td>
+                            <button type="button" class="btn  btn-light btn-outline-danger">Delete</button>
+                            <button type="button" class="btn  btn-light btn-outline-info">Update</button>
+                        </td>
+                    </tr>
+                    }
+                }
+                <tr scope="row" class="table-info">
+                    <td colspan="4">
+                        <button type="button" class="btn  btn-light btn-outline-success">ADD</button>
+                    </td>
+                </tr>
     </tbody>
 
 </table>
