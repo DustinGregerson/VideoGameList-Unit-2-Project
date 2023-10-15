@@ -24,8 +24,8 @@
                         <td>@videoGame.favoriteCharacter</td>
                         <td>Maybe</td>
                         <td>
-                        <button type="button" class="btn  btn-light btn-outline-danger">Delete</button>
-                        <button type="button" class="btn  btn-light btn-outline-info">Update</button>
+                        <input type="button" class="btn btn-light btn-outline-danger" value="Delete" onclick="location.href='@Url.Action("Delete", "VideoGame")'" />
+                        <input type="button" class="btn btn-light btn-outline-info" value="Update" onclick="location.href='@Url.Action("Edit", "VideoGame")'" />
                         </td>
                     </tr>
                     }
@@ -36,8 +36,8 @@
                         <td>@videoGame.favoriteCharacter</td>
                         <td>Yes</td>
                         <td>
-                            <button type="button" class="btn  btn-light btn-outline-danger">Delete</button>
-                            <button type="button" class="btn  btn-light btn-outline-info">Update</button>
+                        <input type="button" class="btn btn-light btn-outline-danger" value="Delete" onclick="location.href='@Url.Action("Delete", "VideoGame")'" />
+                        <input type="button" class="btn btn-light btn-outline-info" value="Update" onclick="location.href='@Url.Action("Edit", "VideoGame")'" />
                         </td>
                     </tr>
                     }
@@ -48,15 +48,15 @@
                         <td>@videoGame.favoriteCharacter</td>
                         <td>No</td>
                         <td>
-                            <button type="button" class="btn  btn-light btn-outline-danger">Delete</button>
-                            <button type="button" class="btn  btn-light btn-outline-info">Update</button>
+                        <input type="button" class="btn btn-light btn-outline-danger" value="Delete" onclick="location.href='@Url.Action("Delete", "VideoGame")'" />
+                        <input type="button" class="btn btn-light btn-outline-info" value="Update" onclick="location.href='@Url.Action("Edit", "VideoGame")'" />
                         </td>
                     </tr>
                     }
                 }
                 <tr scope="row" class="table-info">
                     <td colspan="4">
-                        <button type="button" class="btn  btn-light btn-outline-success">ADD</button>
+                        <input type="button" class="btn  btn-light btn-outline-success" value="Add" onclick="location.href='@Url.Action("Add", "VideoGame")'" />
                     </td>
                 </tr>
     </tbody>
