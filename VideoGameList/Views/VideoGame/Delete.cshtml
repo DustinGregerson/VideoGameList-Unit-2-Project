@@ -2,6 +2,17 @@
 @{
     ViewBag.Title = "Delete Video Game";
 }
+<!--
+Author Dustin Gregerson
+Date 10/15/2023
+Description:
+The video game model is collected from the index page.
+If the user clicks on Delete then the model is sent to the video game controller along with the id of the record
+to remove it from the data base.
+If the user clicks on Cancel the browser is redirected to the index page.
+
+
+-->
 <h2 class="text-center">Confirm Deletion</h2>
 <h3 class="text-center">@Model.name</h3>
 <form class="text-center" asp-action="Delete" method="post">

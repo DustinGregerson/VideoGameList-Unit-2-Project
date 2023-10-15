@@ -3,6 +3,24 @@
     String title = ViewBag.Action + " Vidieo Game";
     ViewBag.Title = title;
 }
+<!--
+Author Dustin Gregerson
+Date 10/15/2023
+Description:
+the user is directed to this page through the VideoGame Controller
+the user could have clicked on add or edit
+
+the difference is that the id of the model collected from the index page will have an id that is in the database
+or one that is not in the database index zero
+
+if the id returned is in the database
+the input fields will be filled out and the new data entered will alter the record.
+
+if the id returned is 0 the controller will enter a new record into the database with the information
+provided in the input fields.
+
+-->
+
 <h2>@ViewBag.Title</h2>
 <form asp-action="Edit" method="post">
     <div asp-validation-summary="All" class="text-danger"></div>
