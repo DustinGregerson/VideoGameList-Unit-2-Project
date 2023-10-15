@@ -1,4 +1,4 @@
-﻿using Humanizer.Localisation;
+﻿
 using Microsoft.EntityFrameworkCore;
 
 namespace VideoGameList.Models
@@ -13,7 +13,7 @@ namespace VideoGameList.Models
             : base(options) { }
 
 
-        public DbSet<videoGame> Movies { get; set; }
+        public DbSet<videoGame> videoGames { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             
@@ -27,14 +27,14 @@ namespace VideoGameList.Models
             },
              new videoGame
              {
-                 videoGameId = 1,
+                 videoGameId = 2,
                  name = "Factorio",
-                 favoriteCharacter = "player",
+                 favoriteCharacter = "Protagonist",
                  wouldPlayAgain = true
              },
              new videoGame
              {
-                 videoGameId = 1,
+                 videoGameId = 3,
                  name = "satisfactory",
                  favoriteCharacter = "Protagonist",
                  wouldPlayAgain = true

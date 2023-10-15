@@ -10,7 +10,7 @@ namespace VideoGameList.Models
         public string? favoriteCharacter { get; set; }
         [Required(ErrorMessage = "Please enter favorite character.")]
         public bool? wouldPlayAgain { get; set; }
-        [Required(ErrorMessage = "Please enter yes or no.")]
-
+       // [Required(ErrorMessage = "Please enter yes or no.")]
+       
     }
 }
