@@ -18,7 +18,8 @@
     </div>
 
     <div class="mb-3">
-        <select asp-for="wouldPlayAgain" class="form-control">
+        <label asp-for="wouldPlayAgain">Would you play it again?</label>
+        <select asp-for="wouldPlayAgain" class="form-select" multiple>
             <option value="true">Yes</option>
             <option value="false">No</option>
             <option value="@DBNull.Value">Maybe</option>
